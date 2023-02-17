@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29ee6ea5c00431792d14d4d2e6510b3, type: 3}
+  m_Name: UiControlButtonDescriptorCollection
+  m_EditorClassIdentifier: 
+  Descriptors:
+  - {fileID: 11400000, guid: 9abd9d870218e314db5cb754addefccd, type: 2}
+  - {fileID: 11400000, guid: f50670750b77b3f4f945c9fff73e4c4b, type: 2}
+  - {fileID: 11400000, guid: 339e9e3b59eb1b24f918f05b8106170b, type: 2}
+  - {fileID: 11400000, guid: 7101632c6d277894b9060573a7d30e98, type: 2}
