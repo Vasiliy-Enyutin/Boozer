@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6392b0fe42d34d61874cd8086d496ec6, type: 3}
+  m_Name: DControlButton
+  m_EditorClassIdentifier: 
+  Button: 3
+  UnpressedSprite: {fileID: 1323376498, guid: 7b632b09672773d479f2de590cd9e440, type: 3}
+  PressedSprite: {fileID: -888377373, guid: 7b632b09672773d479f2de590cd9e440, type: 3}

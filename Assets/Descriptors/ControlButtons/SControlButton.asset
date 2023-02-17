@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6392b0fe42d34d61874cd8086d496ec6, type: 3}
+  m_Name: SControlButton
+  m_EditorClassIdentifier: 
+  Button: 2
+  UnpressedSprite: {fileID: -655905363, guid: 1fa46a83b5ab82e429d09faceb81f1b3, type: 3}
+  PressedSprite: {fileID: 1390809284, guid: 1fa46a83b5ab82e429d09faceb81f1b3, type: 3}
