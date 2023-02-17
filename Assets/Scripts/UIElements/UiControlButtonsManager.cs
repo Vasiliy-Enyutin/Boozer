@@ -14,20 +14,11 @@ namespace UIElements
 		private List<UiControlButton> _uiControlButtons;
 		private PlayerMovement _playerMovement;
 
-		private void OnEnable()
-		{
-			_playerMovement = FindObjectOfType<PlayerMovement>();
-			_playerMovement.OnControlsChanged += PlaceButtons;
-		}
-
-		private void OnDisable()
-		{
-			_playerMovement.OnControlsChanged -= PlaceButtons;
-		}
-
-		private void Start()
+		private void Awake()
 		{
 			_uiControlButtons = FindObjectsOfType<UiControlButton>().ToList();
+			_playerMovement = FindObjectOfType<PlayerMovement>();
+			_playerMovement.OnControlsChanged += PlaceButtons;
 		}
 
 		private void PlaceButtons(Dictionary<MovementDirection, ControlButton> evt)
