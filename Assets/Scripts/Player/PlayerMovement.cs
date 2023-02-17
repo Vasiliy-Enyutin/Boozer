@@ -125,21 +125,4 @@ namespace Player
             return numbers;
         }
     }
-
-
-    public enum MovementDirection
-    {
-        Up,
-        Down,
-        Left,
-        Right
-    }
-
-    public enum ControlButton
-    {
-        W,
-        A,
-        S,
-        D
-    }
 }
