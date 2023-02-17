@@ -14,10 +14,11 @@ namespace Player
         private float _moveSpeed;        
         
         private const int MOVEMENT_DIRECTIONS_COUNT = 4;
-        private Vector2 _moveDirection = Vector2.zero;
 
         public Dictionary<ControlButton, bool> PressedButtons { get; } = new();
         public Dictionary<MovementDirection, ControlButton> KeyAssignment { get; } = new();
+        
+        public Vector2 MoveDirection { get; private set; } = Vector2.zero;
 
         public void ChangeControlButtons()
         {
@@ -50,12 +51,12 @@ namespace Player
 
         private void Move()
         {
-            if (_moveDirection.magnitude > 1) 
+            if (MoveDirection.magnitude > 1) 
             {
-                _moveDirection.Normalize();
+                MoveDirection.Normalize();
             }
             
-            transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime);
+            transform.Translate(MoveDirection * _moveSpeed * Time.deltaTime);
         }
 
         private void SetPressedButtons()
@@ -110,7 +111,12 @@ namespace Player
                 }
             }
 
-            _moveDirection = direction;
+            if (direction.magnitude > 1)
+            {
+                direction.Normalize();
+            }
+
+            MoveDirection = direction;
         }
 
         private List<int> GetRandomNumbers(int length)
