@@ -7,11 +7,15 @@ namespace Player
     {
         [SerializeField]
         private Animator _animator;
+        [SerializeField]
+        private Transform _playerGFX;
 
         private PlayerMovement _playerMovement;
+        private Vector3 _baseScale;
 
         private void Awake()
         {
+            _baseScale = _playerGFX.localScale;
             _playerMovement = GetComponent<PlayerMovement>();
         }
 
@@ -29,18 +33,12 @@ namespace Player
             }
             else if (direction.x > 0)
             {
-                if (transform.localScale.x > 0)
-                {
-                    FlipX();
-                }
+                _playerGFX.localScale = new Vector3(-_baseScale.x, _baseScale.y, _baseScale.z);
                 _animator.Play("Run_side");
             }
             else if (direction.x < 0)
             {
-                if (transform.localScale.x < 0)
-                {
-                    FlipX();
-                }
+                _playerGFX.localScale = new Vector3(_baseScale.x, _baseScale.y, _baseScale.z);
                 _animator.Play("Run_side");
             }
             else if (direction.y > 0)
@@ -51,11 +49,6 @@ namespace Player
             {
                 _animator.Play("Run_down");
             }
-        }
-
-        private void FlipX()
-        {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
     }
 }
