@@ -9,6 +9,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         public event Action<Dictionary<MovementDirection, ControlButton>> OnControlsChanged;
+        public event Action<Dictionary<MovementDirection, ControlButton>> OnDefaultControlsSet;
 
         [SerializeField]
         private float _moveSpeed;        
@@ -126,7 +127,7 @@ namespace Player
             KeyAssignment.Add(MovementDirection.Down, ControlButton.S);
             KeyAssignment.Add(MovementDirection.Left, ControlButton.A);
             KeyAssignment.Add(MovementDirection.Right, ControlButton.D);
-            OnControlsChanged?.Invoke(KeyAssignment);
+            OnDefaultControlsSet?.Invoke(KeyAssignment);
         }
 
         private List<int> GetRandomNumbers(int length)
