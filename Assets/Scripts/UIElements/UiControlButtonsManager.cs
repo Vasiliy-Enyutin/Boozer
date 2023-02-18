@@ -22,20 +22,26 @@ namespace UIElements
 			_playerMovement = FindObjectOfType<PlayerMovement>();
 			_uiControlsButtonAnimator = GetComponent<UiControlsButtonAnimator>();
 			_playerMovement.OnControlsChanged += PlaceButtons;
+			_playerMovement.OnDefaultControlsSet += PlaceButtonsWithoutMix;
 		}
 
 		private void PlaceButtons(Dictionary<MovementDirection, ControlButton> evt)
 		{
-			StartCoroutine(TestRoutine(evt));
+			_uiControlsButtonAnimator.PlayMix();
+			StartCoroutine(PlaceButtonsRoutine(evt));
+		}
+		
+		private void PlaceButtonsWithoutMix(Dictionary<MovementDirection, ControlButton> evt)
+		{
+			StartCoroutine(PlaceButtonsRoutine(evt));
 		}
 
-		private IEnumerator TestRoutine(Dictionary<MovementDirection, ControlButton> evt)
+		private IEnumerator PlaceButtonsRoutine(Dictionary<MovementDirection, ControlButton> evt)
 		{
-			_uiControlsButtonAnimator.PlayMix();
 			yield return new WaitForSeconds(1f);
 			foreach (UiControlButton uiControlButton in _uiControlButtons) {
-				ControlButton controlButton = evt[uiControlButton.MovementDirection];
-				UiControlButtonDescriptor uiControlButtonDescriptor = _controlButtonDescriptorCollection.RequireDescriptor(controlButton);
+				MovementDirection movementDirection = evt.FirstOrDefault(x => x.Value == uiControlButton.ControlButton).Key;
+				UiControlButtonDescriptor uiControlButtonDescriptor = _controlButtonDescriptorCollection.RequireDescriptor(movementDirection);
 				uiControlButton.SetControlButton(uiControlButtonDescriptor);
 			}
 		}

@@ -9,9 +9,9 @@ namespace Descriptors
 	{
 		public List<UiControlButtonDescriptor> Descriptors;
 		
-		public UiControlButtonDescriptor RequireDescriptor(ControlButton button)
+		public UiControlButtonDescriptor RequireDescriptor(MovementDirection movementDirection)
 		{
-			return Descriptors.Find(descriptor => descriptor.Button == button);
+			return Descriptors.Find(descriptor => descriptor.MovementDirection == movementDirection);
 		}
 	}
 }

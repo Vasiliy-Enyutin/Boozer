@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6392b0fe42d34d61874cd8086d496ec6, type: 3}
-  m_Name: SControlButton
+  m_Name: LeftControlButton
   m_EditorClassIdentifier: 
-  Button: 2
-  UnpressedSprite: {fileID: -655905363, guid: 1fa46a83b5ab82e429d09faceb81f1b3, type: 3}
-  PressedSprite: {fileID: 1390809284, guid: 1fa46a83b5ab82e429d09faceb81f1b3, type: 3}
+  MovementDirection: 2
+  UnpressedSprite: {fileID: 1099750175, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}
+  PressedSprite: {fileID: -1578279126, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}
