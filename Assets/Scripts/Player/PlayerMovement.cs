@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,18 +8,37 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
+        public event Action<Dictionary<MovementDirection, ControlButton>> OnControlsChanged;
+
         [SerializeField]
         private float _moveSpeed;        
         
         private const int MOVEMENT_DIRECTIONS_COUNT = 4;
-        private readonly Dictionary<ControlButton, bool> _pressedButtons = new ();
 
+        public Dictionary<ControlButton, bool> PressedButtons { get; } = new();
         public Dictionary<MovementDirection, ControlButton> KeyAssignment { get; } = new();
         
-        public Vector2 MoveDirection { get; private set; }  = Vector2.zero;
+        public Vector2 MoveDirection { get; private set; } = Vector2.zero;
 
-        private void Awake()
+        public void ChangeControlButtons()
         {
+            List<int> randomNumbers = GetRandomNumbers(4);
+            KeyAssignment.Clear();
+            for (int i = 0; i < MOVEMENT_DIRECTIONS_COUNT; i++)
+            {
+                KeyAssignment.Add((MovementDirection) i, (ControlButton) randomNumbers[i]);
+            }
+
+            foreach (KeyValuePair<MovementDirection, ControlButton> directionToButton in KeyAssignment)
+            {
+                Debug.Log($"Direction = {directionToButton.Key}, button = {directionToButton.Value}");
+            }
+            OnControlsChanged?.Invoke(KeyAssignment);
+        }
+
+        private void Start()
+        {
+            SetPressedButtons();
             ChangeControlButtons();
         }
 
@@ -42,46 +62,31 @@ namespace Player
         private void SetPressedButtons()
         {
             if (Input.GetKey("w"))
-                _pressedButtons[ControlButton.W] = true;
+                PressedButtons[ControlButton.W] = true;
             else
-                _pressedButtons[ControlButton.W] = false;
+                PressedButtons[ControlButton.W] = false;
             
             if (Input.GetKey("s"))
-                _pressedButtons[ControlButton.S] = true;
+                PressedButtons[ControlButton.S] = true;
             else
-                _pressedButtons[ControlButton.S] = false;
+                PressedButtons[ControlButton.S] = false;
             
             if (Input.GetKey("a"))
-                _pressedButtons[ControlButton.A] = true;
+                PressedButtons[ControlButton.A] = true;
             else
-                _pressedButtons[ControlButton.A] = false;
+                PressedButtons[ControlButton.A] = false;
             
             if (Input.GetKey("d"))
-                _pressedButtons[ControlButton.D] = true;
+                PressedButtons[ControlButton.D] = true;
             else
-                _pressedButtons[ControlButton.D] = false;
-        }
-
-        private void ChangeControlButtons()
-        {
-            List<int> randomNumbers = GetRandomNumbers(4);
-            KeyAssignment.Clear();
-            for (int i = 0; i < MOVEMENT_DIRECTIONS_COUNT; i++)
-            {
-                KeyAssignment.Add((MovementDirection) i, (ControlButton) randomNumbers[i]);
-            }
-
-            foreach (KeyValuePair<MovementDirection, ControlButton> directionToButton in KeyAssignment)
-            {
-                Debug.Log($"Direction = {directionToButton.Key}, button = {directionToButton.Value}");
-            }
+                PressedButtons[ControlButton.D] = false;
         }
 
         private void SetMoveDirection()
         {
             Vector2 direction = Vector2.zero;
             
-            foreach (KeyValuePair<ControlButton, bool> buttonToState in _pressedButtons)
+            foreach (KeyValuePair<ControlButton, bool> buttonToState in PressedButtons)
             {
                 if (buttonToState.Value == false)
                 {
