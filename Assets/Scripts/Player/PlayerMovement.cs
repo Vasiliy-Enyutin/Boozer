@@ -39,7 +39,7 @@ namespace Player
         private void Start()
         {
             SetPressedButtons();
-            ChangeControlButtons();
+            SetDefaultButtons();
         }
 
         private void Update()
@@ -117,6 +117,16 @@ namespace Player
             }
 
             MoveDirection = direction;
+        }
+
+        private void SetDefaultButtons()
+        {
+            KeyAssignment.Clear();
+            KeyAssignment.Add(MovementDirection.Up, ControlButton.W);
+            KeyAssignment.Add(MovementDirection.Down, ControlButton.S);
+            KeyAssignment.Add(MovementDirection.Left, ControlButton.A);
+            KeyAssignment.Add(MovementDirection.Right, ControlButton.D);
+            OnControlsChanged?.Invoke(KeyAssignment);
         }
 
         private List<int> GetRandomNumbers(int length)
