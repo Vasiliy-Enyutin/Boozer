@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6392b0fe42d34d61874cd8086d496ec6, type: 3}
-  m_Name: WControlButton
+  m_Name: RightControlButton
   m_EditorClassIdentifier: 
-  Button: 0
-  UnpressedSprite: {fileID: 908936713, guid: bbe921c84de7a294ca4c0b1caa7ea5cc, type: 3}
-  PressedSprite: {fileID: 794055458, guid: bbe921c84de7a294ca4c0b1caa7ea5cc, type: 3}
+  MovementDirection: 3
+  UnpressedSprite: {fileID: -88466544, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}
+  PressedSprite: {fileID: 1337653516, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}

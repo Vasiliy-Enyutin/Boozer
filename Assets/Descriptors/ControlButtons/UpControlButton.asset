@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6392b0fe42d34d61874cd8086d496ec6, type: 3}
-  m_Name: DControlButton
+  m_Name: UpControlButton
   m_EditorClassIdentifier: 
-  Button: 3
-  UnpressedSprite: {fileID: 1323376498, guid: 7b632b09672773d479f2de590cd9e440, type: 3}
-  PressedSprite: {fileID: -888377373, guid: 7b632b09672773d479f2de590cd9e440, type: 3}
+  MovementDirection: 0
+  UnpressedSprite: {fileID: 884843853, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}
+  PressedSprite: {fileID: 105558490, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}

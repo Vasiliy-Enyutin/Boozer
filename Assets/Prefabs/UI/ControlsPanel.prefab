@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1243036315, guid: 673ab818af866744997f0eabbfe41b00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bd29d0b8ee5acd46affe9f32d8fc10c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f27cb35917cd2e479441d692509fd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDirection: 2
+  _controlButton: 1
 --- !u!1 &2248179687380437630
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1243036315, guid: 673ab818af866744997f0eabbfe41b00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7806a7ed4d0ef024a85dff63fe4ae55e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f27cb35917cd2e479441d692509fd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDirection: 1
+  _controlButton: 2
 --- !u!1 &2248179687563953279
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1243036315, guid: 673ab818af866744997f0eabbfe41b00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6db25cc5e98a34840b77e5f3de0863d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f27cb35917cd2e479441d692509fd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDirection: 3
+  _controlButton: 3
 --- !u!1 &2248179687695796029
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1243036315, guid: 673ab818af866744997f0eabbfe41b00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 350663713595d8e479d2db3ad1a381bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -535,4 +535,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f27cb35917cd2e479441d692509fd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDirection: 0
+  _controlButton: 0

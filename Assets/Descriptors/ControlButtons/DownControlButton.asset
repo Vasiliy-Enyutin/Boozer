@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6392b0fe42d34d61874cd8086d496ec6, type: 3}
-  m_Name: AControlButton
+  m_Name: DownControlButton
   m_EditorClassIdentifier: 
-  Button: 1
-  UnpressedSprite: {fileID: -929494174, guid: 39c644cb649fcfe41b439013704fd96b, type: 3}
-  PressedSprite: {fileID: -1966135880, guid: 39c644cb649fcfe41b439013704fd96b, type: 3}
+  MovementDirection: 1
+  UnpressedSprite: {fileID: 1415167323, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}
+  PressedSprite: {fileID: 1323773196, guid: aa7674abc4c79d441b9fdad97842b5cd, type: 3}

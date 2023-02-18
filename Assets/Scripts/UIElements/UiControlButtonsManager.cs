@@ -40,8 +40,8 @@ namespace UIElements
 		{
 			yield return new WaitForSeconds(1f);
 			foreach (UiControlButton uiControlButton in _uiControlButtons) {
-				ControlButton controlButton = evt[uiControlButton.MovementDirection];
-				UiControlButtonDescriptor uiControlButtonDescriptor = _controlButtonDescriptorCollection.RequireDescriptor(controlButton);
+				MovementDirection movementDirection = evt.FirstOrDefault(x => x.Value == uiControlButton.ControlButton).Key;
+				UiControlButtonDescriptor uiControlButtonDescriptor = _controlButtonDescriptorCollection.RequireDescriptor(movementDirection);
 				uiControlButton.SetControlButton(uiControlButtonDescriptor);
 			}
 		}
