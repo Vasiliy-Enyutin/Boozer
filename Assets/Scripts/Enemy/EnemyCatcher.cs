@@ -15,6 +15,16 @@ namespace Enemy
         private PlayerMovement _playerMovement;
         
         private bool _catched;
+        
+        public void PausePathfinding()
+        {
+            _aiPath.isStopped = true;
+        }
+        
+        public void UnpausePathfinding()
+        {
+            _aiPath.isStopped = false;
+        }
 
         private void Awake()
         {
@@ -41,13 +51,13 @@ namespace Enemy
 
         private void PausePathfinding(Dictionary<MovementDirection, ControlButton> obj)
         {
-            StartCoroutine(WaitRoutine());
+            StartCoroutine(WaitRoutine(WAIT_DURATION));
         }
 
-        private IEnumerator WaitRoutine()
+        private IEnumerator WaitRoutine(float waitDuration)
         {
             _aiPath.isStopped = true;
-            yield return new WaitForSeconds(WAIT_DURATION);
+            yield return new WaitForSeconds(waitDuration);
             _aiPath.isStopped = false;
         }
     }
