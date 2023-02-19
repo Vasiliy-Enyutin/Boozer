@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ namespace Player
         private float _moveSpeed;        
         
         private const int MOVEMENT_DIRECTIONS_COUNT = 4;
+        private const float WAIT_DURATION = 2f; 
+        private bool _canMove = true;
 
         public Dictionary<ControlButton, bool> PressedButtons { get; } = new();
         public Dictionary<MovementDirection, ControlButton> KeyAssignment { get; } = new();
@@ -29,12 +32,15 @@ namespace Player
             {
                 KeyAssignment.Add((MovementDirection) i, (ControlButton) randomNumbers[i]);
             }
-
-            foreach (KeyValuePair<MovementDirection, ControlButton> directionToButton in KeyAssignment)
-            {
-                Debug.Log($"Direction = {directionToButton.Key}, button = {directionToButton.Value}");
-            }
             OnControlsChanged?.Invoke(KeyAssignment);
+            StartCoroutine(PauseMoving());
+        }
+
+        private IEnumerator PauseMoving()
+        {
+            _canMove = false;
+            yield return new WaitForSeconds(WAIT_DURATION);
+            _canMove = true;
         }
 
         private void Start()
@@ -45,6 +51,10 @@ namespace Player
 
         private void Update()
         {
+            if (_canMove == false)
+            {
+                return;
+            }
             SetPressedButtons();
             SetMoveDirection();
             Move();

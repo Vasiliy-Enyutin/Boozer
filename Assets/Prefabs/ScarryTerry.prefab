@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8328508130551551183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -178,8 +178,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
-  m_Size: {x: 0.65, y: 1}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.9, y: 1.6}
   m_Direction: 0
 --- !u!114 &1239162401
 MonoBehaviour:
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.4
+  radius: 0.8
   height: 2
   canMove: 1
   maxSpeed: 2.5
@@ -244,7 +244,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.2
   pickNextWaypointDist: 1
-  endReachedDistance: 1.1
+  endReachedDistance: 1.4
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
