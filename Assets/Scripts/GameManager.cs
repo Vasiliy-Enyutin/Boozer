@@ -3,6 +3,7 @@ using Enemy;
 using Player;
 using UIElements;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,9 +17,10 @@ public class GameManager : MonoBehaviour
 		UnityEngine.SceneManagement.SceneManager.LoadScene(1);
 	}
 	
-	public void LoadNextLevel()
+	public IEnumerator LoadNextLevel()
 	{
-		UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+		yield return new WaitForSeconds(3);
+		SceneManager.LoadScene(2);
 	}
 
 	private IEnumerator Start()
@@ -47,6 +49,11 @@ public class GameManager : MonoBehaviour
 		_uiManager.HideAll();
 		_uiManager.ShowLevelWinPanel();
 		_finishReached = true;
+		if (SceneManager.GetActiveScene().buildIndex == 2)
+		{
+			return;
+		}
+		StartCoroutine(LoadNextLevel());
 	}
 
 	private void OnCatched()
