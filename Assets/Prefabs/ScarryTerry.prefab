@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 8328508130964408295}
   - component: {fileID: 3746346527722960632}
   - component: {fileID: 1239162401}
+  - component: {fileID: 5851305037497124279}
   - component: {fileID: 8328508129751472635}
   - component: {fileID: 8328508129751472636}
   - component: {fileID: 8328508129751472637}
@@ -194,6 +195,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 1787667049}
   _enemyGFX: {fileID: 8328508130551551182}
+--- !u!114 &5851305037497124279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328508130964408293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b8e2b1d1cb76a48afd62bc81408823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8328508129751472635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +223,7 @@ MonoBehaviour:
   radius: 0.4
   height: 2
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 2.5
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -231,7 +244,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.2
   pickNextWaypointDist: 1
-  endReachedDistance: 0.2
+  endReachedDistance: 1.1
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
