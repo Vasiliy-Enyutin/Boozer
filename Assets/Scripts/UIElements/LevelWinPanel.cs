@@ -27,7 +27,7 @@ namespace UIElements
 
 		private void Update()
 		{
-			if (Input.GetKeyDown(KeyCode.Space)) {
+			if (Input.GetKeyDown(KeyCode.Escape)) {
 				_gameManager.ExitToMainMenu();
 				Hide();
 			}
