@@ -33,20 +33,39 @@ namespace Player
                 KeyAssignment.Add((MovementDirection) i, (ControlButton) randomNumbers[i]);
             }
             OnControlsChanged?.Invoke(KeyAssignment);
-            StartCoroutine(PauseMoving());
+            StartCoroutine(PauseMoving(WAIT_DURATION));
+        }
+        
+        public void UnpauseMoving()
+        {
+            _canMove = true;
         }
 
-        private IEnumerator PauseMoving()
+        public IEnumerator PauseMoving(float duration)
         {
             _canMove = false;
-            yield return new WaitForSeconds(WAIT_DURATION);
+            yield return new WaitForSeconds(duration);
             _canMove = true;
+        }
+
+        public void PauseMoving()
+        {
+            _canMove = false;
+        }
+
+        public void SetDefaultButtons()
+        {
+            KeyAssignment.Clear();
+            KeyAssignment.Add(MovementDirection.Up, ControlButton.W);
+            KeyAssignment.Add(MovementDirection.Down, ControlButton.S);
+            KeyAssignment.Add(MovementDirection.Left, ControlButton.A);
+            KeyAssignment.Add(MovementDirection.Right, ControlButton.D);
+            OnDefaultControlsSet?.Invoke(KeyAssignment);
         }
 
         private void Start()
         {
             SetPressedButtons();
-            SetDefaultButtons();
         }
 
         private void Update()
@@ -128,16 +147,6 @@ namespace Player
             }
 
             MoveDirection = direction;
-        }
-
-        private void SetDefaultButtons()
-        {
-            KeyAssignment.Clear();
-            KeyAssignment.Add(MovementDirection.Up, ControlButton.W);
-            KeyAssignment.Add(MovementDirection.Down, ControlButton.S);
-            KeyAssignment.Add(MovementDirection.Left, ControlButton.A);
-            KeyAssignment.Add(MovementDirection.Right, ControlButton.D);
-            OnDefaultControlsSet?.Invoke(KeyAssignment);
         }
 
         private List<int> GetRandomNumbers(int length)

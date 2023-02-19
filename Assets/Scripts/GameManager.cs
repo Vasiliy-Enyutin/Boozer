@@ -1,4 +1,6 @@
-﻿using Player;
+﻿using System.Collections;
+using Enemy;
+using Player;
 using UIElements;
 using UnityEngine;
 
@@ -8,25 +10,36 @@ public class GameManager : MonoBehaviour
 	private UiManager _uiManager;
 
 	private bool _finishReached;
-
+	
 	public void RestartLevel()
 	{
 		UnityEngine.SceneManagement.SceneManager.LoadScene(1);
 	}
 	
-	public void LoadLevel()
+	public void LoadNextLevel()
 	{
 		UnityEngine.SceneManagement.SceneManager.LoadScene(1);
 	}
 
-	private void Start()
+	private IEnumerator Start()
 	{
 		_uiManager = FindObjectOfType<UiManager>();
-		_uiManager.ShowUiControlButtons();
+		_uiManager.ShowTutorialPanel();
 		
 		_endgameInformer = FindObjectOfType<EndgameInformer>();
 		_endgameInformer.OnFinishReached += OnFinishReached;
 		_endgameInformer.OnCatched += OnCatched;
+		
+		PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
+		playerMovement.PauseMoving();
+		EnemyCatcher enemyCatcher = FindObjectOfType<EnemyCatcher>();
+		enemyCatcher.PausePathfinding();
+		yield return new WaitWhile(() => _uiManager.IsWaitingForPlayerInput);
+		playerMovement.UnpauseMoving();
+		enemyCatcher.UnpausePathfinding();
+		_uiManager.HideAll();
+		_uiManager.ShowUiControlButtons();
+		playerMovement.SetDefaultButtons();
 	}
 
 	private void OnFinishReached()
