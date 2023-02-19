@@ -14,6 +14,7 @@ namespace Debuggers
 		
 		private void Update()
 		{
+			return;
 			if (Input.GetKeyDown(KeyCode.W)) {
 				_uiManager.ShowLevelWinPanel();
 			} else if (Input.GetKeyDown(KeyCode.L)) {

@@ -14,6 +14,7 @@ namespace UIElements
 
 		private List<UiControlButton> _uiControlButtons;
 		private PlayerMovement _playerMovement;
+
 		private UiControlsButtonAnimator _uiControlsButtonAnimator;
 
 		private void Awake()
@@ -30,7 +31,7 @@ namespace UIElements
 			_uiControlsButtonAnimator.PlayMix();
 			StartCoroutine(PlaceButtonsRoutine(evt));
 		}
-		
+
 		private void PlaceButtonsWithoutMix(Dictionary<MovementDirection, ControlButton> evt)
 		{
 			StartCoroutine(PlaceButtonsRoutine(evt));
