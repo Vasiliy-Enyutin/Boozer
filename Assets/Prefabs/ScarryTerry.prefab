@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 602684485, guid: 85c3de36b0630f54f80de1f7c8e97085, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,7 +115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8328508130964408294}
   - component: {fileID: 8328508130964408295}
-  - component: {fileID: 3746346527722960632}
   - component: {fileID: 1239162401}
   - component: {fileID: 5851305037497124279}
   - component: {fileID: 8328508129751472635}
@@ -165,22 +164,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &3746346527722960632
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8328508130964408293}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9, y: 1.6}
-  m_Direction: 0
 --- !u!114 &1239162401
 MonoBehaviour:
   m_ObjectHideFlags: 0
