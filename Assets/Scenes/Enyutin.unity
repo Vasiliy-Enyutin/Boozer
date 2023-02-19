@@ -1107,11 +1107,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!212 &97030943 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8089570057045048308, guid: 9dd5aa6f6448c35439b8692daab74e9a, type: 3}
-  m_PrefabInstance: {fileID: 810436888}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &153790870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,18 +1794,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 21207272429778683, guid: 9dd5aa6f6448c35439b8692daab74e9a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21207272429778683, guid: 9dd5aa6f6448c35439b8692daab74e9a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 617666084523515674, guid: 9dd5aa6f6448c35439b8692daab74e9a, type: 3}
-      propertyPath: _playerSprite
-      value: 
-      objectReference: {fileID: 97030943}
     - target: {fileID: 5301173448784581062, guid: 9dd5aa6f6448c35439b8692daab74e9a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3818,11 +3801,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!212 &2117222741 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8328508130551551169, guid: e1d9b0d724b40ab4f8c2fd7747ce44cf, type: 3}
-  m_PrefabInstance: {fileID: 8328508129751472633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8328508129751472633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3830,10 +3808,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1239162401, guid: e1d9b0d724b40ab4f8c2fd7747ce44cf, type: 3}
-      propertyPath: _enemySprite
-      value: 
-      objectReference: {fileID: 2117222741}
     - target: {fileID: 8328508129751472637, guid: e1d9b0d724b40ab4f8c2fd7747ce44cf, type: 3}
       propertyPath: target
       value: 
