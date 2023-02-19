@@ -13,21 +13,20 @@ namespace UIElements
 		private PlayerMovement _playerMovement;
 		private Image _image;
 		
-		private MovementDirection _movementDirection;
 		private Sprite _unpressedStateSprite;
 		private Sprite _pressedStateSprite;
 
 		public void SetControlButton(UiControlButtonDescriptor descriptor)
 		{
-			_movementDirection = descriptor.MovementDirection;
 			_unpressedStateSprite = descriptor.UnpressedSprite;
 			_pressedStateSprite = descriptor.PressedSprite;
+			
+			_image.sprite = _unpressedStateSprite;
 		}
 
 		private void Awake()
 		{
 			_image = GetComponent<Image>();
-			_image.sprite = _unpressedStateSprite;
 		}
 
 		private void Start()
@@ -37,6 +36,9 @@ namespace UIElements
 
 		private void Update()
 		{
+			if (_pressedStateSprite == null || _unpressedStateSprite == null) {
+				return;
+			}
 			_image.sprite = _playerMovement.PressedButtons[_controlButton] ? _pressedStateSprite : _unpressedStateSprite;
 		}
 		

@@ -117,3 +117,4 @@ MonoBehaviour:
   _gameOverPanelPrefab: {fileID: 6224965824071500862, guid: a0cfff1f6117f7749bc21ec7fcab65cc, type: 3}
   _controlsPanelPrefab: {fileID: 3418345614589250810, guid: 5a1a0cbfc8d684a4c8ac21b244f353ef, type: 3}
   _mainMenuPanelPrefab: {fileID: 7178297889630912424, guid: 6f9a78edf4d083b48b345cad69bfe646, type: 3}
+  _tutorialPanelPrefab: {fileID: 717409818658408607, guid: 14d33719b3a7165409bdc100ae5c22eb, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2248179687994244651}
   - component: {fileID: 2248179687994244693}
   - component: {fileID: 3418345614589250810}
+  - component: {fileID: 6548538516917997834}
   m_Layer: 5
   m_Name: ControlsPanel
   m_TagString: Untagged
@@ -60,6 +61,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20f067aa50ff46a49e6820998386aeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6548538516917997834
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248179687994244650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df300b34a48c01c48865afc952f4c760, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7756036519615067560
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.050980397, g: 0.050980397, b: 0.050980397, a: 1}
+  m_Color: {r: 0.050980397, g: 0.050980397, b: 0.050980397, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
