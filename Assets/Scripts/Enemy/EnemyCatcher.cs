@@ -13,6 +13,8 @@ namespace Enemy
         private AIPath _aiPath;
         private EndgameInformer _endgameInformer;
         private PlayerMovement _playerMovement;
+        
+        private bool _catched;
 
         private void Awake()
         {
@@ -28,9 +30,12 @@ namespace Enemy
 
         private void Update()
         {
-            if (_aiPath.reachedEndOfPath)
-            {
+            if (_catched) {
+                return;
+            }
+            if (_aiPath.reachedEndOfPath) {
                 _endgameInformer.InvokeOnCatched();
+                _catched = true;
             }
         }
 
