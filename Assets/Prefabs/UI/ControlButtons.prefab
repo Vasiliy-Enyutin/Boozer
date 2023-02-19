@@ -189,6 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftButtonTransform: {fileID: 4431761737580723687}
   _rightButtonTransform: {fileID: 4431761737276575493}
+  _upButtonTransform: {fileID: 4431761736019538919}
+  _downButtonTransform: {fileID: 4431761737325805826}
 --- !u!1 &4431761737276575490
 GameObject:
   m_ObjectHideFlags: 0
