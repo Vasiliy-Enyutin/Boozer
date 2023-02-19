@@ -10,16 +10,14 @@ namespace Player
         [SerializeField]
         private Animator _animator;
         [SerializeField]
-        private Transform _playerGFX;
+        private SpriteRenderer _playerSprite;
 
         private const float DRINK_DURATION = 2f;
         private PlayerMovement _playerMovement;
-        private Vector3 _baseScale;
         private bool _isDrinking = false;
 
         private void Awake()
         {
-            _baseScale = _playerGFX.localScale;
             _playerMovement = GetComponent<PlayerMovement>();
             _playerMovement.OnControlsChanged += PlayDrinkAnimation;
         }
@@ -42,12 +40,12 @@ namespace Player
             }
             else if (direction.x > 0)
             {
-                _playerGFX.localScale = new Vector3(-_baseScale.x, _baseScale.y, _baseScale.z);
+                _playerSprite.flipX = true;
                 _animator.Play("Run_side");
             }
             else if (direction.x < 0)
             {
-                _playerGFX.localScale = new Vector3(_baseScale.x, _baseScale.y, _baseScale.z);
+                _playerSprite.flipX = false;
                 _animator.Play("Run_side");
             }
             else if (direction.y > 0)
