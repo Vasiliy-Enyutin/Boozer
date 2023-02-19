@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -95,6 +95,30 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -11502,25 +11526,25 @@ TextureImporter:
       lab tileset finished transparent_495: 622907845
       lab tileset finished transparent_497: 1728242212
       lab tileset finished transparent_201: -483625513
+      lab tileset finished transparent_291: -869109758
       lab tileset finished transparent_536: 1580061306
       lab tileset finished transparent_278: 408949792
-      lab tileset finished transparent_291: -869109758
-      lab tileset finished transparent_85: -241492381
-      lab tileset finished transparent_395: -75521403
       lab tileset finished transparent_186: 1956366923
-      lab tileset finished transparent_311: 601973691
-      lab tileset finished transparent_267: 1488507685
-      lab tileset finished transparent_275: 1678766640
-      lab tileset finished transparent_68: -1986300503
-      lab tileset finished transparent_145: 897614915
-      lab tileset finished transparent_496: 296057885
-      lab tileset finished transparent_309: 690595649
-      lab tileset finished transparent_319: -1342809243
-      lab tileset finished transparent_247: -1203754208
-      lab tileset finished transparent_13: 969507387
-      lab tileset finished transparent_111: 2067283210
       lab tileset finished transparent_421: 958947465
+      lab tileset finished transparent_275: 1678766640
+      lab tileset finished transparent_496: 296057885
+      lab tileset finished transparent_145: 897614915
+      lab tileset finished transparent_85: -241492381
+      lab tileset finished transparent_311: 601973691
+      lab tileset finished transparent_319: -1342809243
+      lab tileset finished transparent_68: -1986300503
+      lab tileset finished transparent_267: 1488507685
+      lab tileset finished transparent_13: 969507387
+      lab tileset finished transparent_395: -75521403
+      lab tileset finished transparent_111: 2067283210
+      lab tileset finished transparent_247: -1203754208
       lab tileset finished transparent_427: -1180141242
+      lab tileset finished transparent_309: 690595649
       lab tileset finished transparent_530: 583778503
       lab tileset finished transparent_50: 46166497
       lab tileset finished transparent_310: -68447553
@@ -11708,18 +11732,18 @@ TextureImporter:
       lab tileset finished transparent_218: -1073976200
       lab tileset finished transparent_84: 1527947528
       lab tileset finished transparent_129: 2107915575
-      lab tileset finished transparent_367: -1004239552
       lab tileset finished transparent_292: -911679979
+      lab tileset finished transparent_289: 488510722
       lab tileset finished transparent_481: 469894645
       lab tileset finished transparent_118: 1974263974
       lab tileset finished transparent_38: 2100201220
       lab tileset finished transparent_66: 1134513797
       lab tileset finished transparent_312: 2059121048
       lab tileset finished transparent_62: -836096078
-      lab tileset finished transparent_176: 1990545618
-      lab tileset finished transparent_4: 1545465583
       lab tileset finished transparent_83: -1575192998
-      lab tileset finished transparent_289: 488510722
+      lab tileset finished transparent_4: 1545465583
+      lab tileset finished transparent_367: -1004239552
+      lab tileset finished transparent_176: 1990545618
       lab tileset finished transparent_32: 2069507076
       lab tileset finished transparent_178: 124822642
       lab tileset finished transparent_134: 1670991358
@@ -11730,11 +11754,11 @@ TextureImporter:
       lab tileset finished transparent_353: 1016014537
       lab tileset finished transparent_422: -433760838
       lab tileset finished transparent_128: 730955909
-      lab tileset finished transparent_189: -183330975
       lab tileset finished transparent_287: 363084500
-      lab tileset finished transparent_132: 1523202143
       lab tileset finished transparent_512: 244377938
+      lab tileset finished transparent_132: 1523202143
       lab tileset finished transparent_147: 1914647672
+      lab tileset finished transparent_189: -183330975
       lab tileset finished transparent_329: -285880796
       lab tileset finished transparent_168: 1030439167
       lab tileset finished transparent_500: 1516421041
@@ -11772,11 +11796,11 @@ TextureImporter:
       lab tileset finished transparent_434: -1376604367
       lab tileset finished transparent_161: -191487542
       lab tileset finished transparent_5: -77836058
-      lab tileset finished transparent_377: 301389014
       lab tileset finished transparent_373: 2127158530
+      lab tileset finished transparent_377: 301389014
+      lab tileset finished transparent_405: -250184934
       lab tileset finished transparent_388: 1770752844
       lab tileset finished transparent_513: -1887187438
-      lab tileset finished transparent_405: -250184934
       lab tileset finished transparent_234: -645643840
       lab tileset finished transparent_52: 1650557465
       lab tileset finished transparent_331: -1891265188
@@ -11792,16 +11816,16 @@ TextureImporter:
       lab tileset finished transparent_220: 1300000954
       lab tileset finished transparent_165: 519145693
       lab tileset finished transparent_40: -714272292
+      lab tileset finished transparent_14: 2081386725
       lab tileset finished transparent_8: 1630931063
       lab tileset finished transparent_191: -1471123519
       lab tileset finished transparent_46: -1733989256
-      lab tileset finished transparent_14: 2081386725
+      lab tileset finished transparent_16: -316261135
       lab tileset finished transparent_180: -1636853532
       lab tileset finished transparent_12: -879903726
-      lab tileset finished transparent_16: -316261135
+      lab tileset finished transparent_385: -161201299
       lab tileset finished transparent_87: -575604026
       lab tileset finished transparent_216: 836545513
-      lab tileset finished transparent_385: -161201299
       lab tileset finished transparent_175: -1921386498
       lab tileset finished transparent_298: -9200218
       lab tileset finished transparent_152: -1179565529
