@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1787667049}
-  _enemyGFX: {fileID: 8328508130551551182}
+  _enemySprite: {fileID: 8328508130551551169}
 --- !u!114 &5851305037497124279
 MonoBehaviour:
   m_ObjectHideFlags: 0
