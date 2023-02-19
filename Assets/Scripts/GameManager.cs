@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
 		if (_finishReached) {
 			return;
 		}
+		FindObjectOfType<EnemyCatcher>().PausePathfinding();
 		_uiManager.HideAll();
 		_uiManager.ShowGameOverPanel();
 	}
