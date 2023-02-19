@@ -9,14 +9,13 @@ namespace Enemy
         [SerializeField]
         private Animator _animator;
         [SerializeField]
-        private Transform _enemyGFX;
+        private SpriteRenderer _enemySprite;
         
         private AIPath _aiPath;
         private Vector3 _baseScale;
 
         private void Awake()
         {
-            _baseScale = _enemyGFX.localScale;
             _aiPath = GetComponent<AIPath>();
         }
 
@@ -35,12 +34,12 @@ namespace Enemy
             {
                 if (_aiPath.velocity.x > 0)
                 {
-                    _enemyGFX.localScale = new Vector3(-_baseScale.x, _baseScale.y, _baseScale.z);
+                    _enemySprite.flipX = true;
                     _animator.Play("Run_side");
                 }
                 else if (_aiPath.velocity.x < 0)
                 {
-                    _enemyGFX.localScale = new Vector3(_baseScale.x, _baseScale.y, _baseScale.z);
+                    _enemySprite.flipX = false;
                     _animator.Play("Run_side");
                 }
             }
