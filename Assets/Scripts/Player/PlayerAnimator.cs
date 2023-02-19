@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Player
@@ -10,17 +12,24 @@ namespace Player
         [SerializeField]
         private Transform _playerGFX;
 
+        private const float DRINK_DURATION = 2f;
         private PlayerMovement _playerMovement;
         private Vector3 _baseScale;
+        private bool _isDrinking = false;
 
         private void Awake()
         {
             _baseScale = _playerGFX.localScale;
             _playerMovement = GetComponent<PlayerMovement>();
+            _playerMovement.OnControlsChanged += PlayDrinkAnimation;
         }
 
         private void Update()
         {
+            if (_isDrinking == true)
+            {
+                return;
+            }
             UpdateAnimation();
         }
 
@@ -49,6 +58,20 @@ namespace Player
             {
                 _animator.Play("Run_down");
             }
+        }
+
+        private void PlayDrinkAnimation(Dictionary<MovementDirection, ControlButton> controlButtons)
+        {
+            // TODO анимация питья вместо idle
+            _animator.Play("Idle");
+            StartCoroutine(WaitForDrinkAnimation());
+        }
+
+        private IEnumerator WaitForDrinkAnimation()
+        {
+            _isDrinking = true;
+            yield return new WaitForSeconds(DRINK_DURATION);
+            _isDrinking = false;
         }
     }
 }
