@@ -12,9 +12,10 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out PlayerMovement _))
-        {
-            _endgameInformer.InvokeOnFinishReached();
+        if (!other.TryGetComponent(out PlayerMovement playerMovement)) {
+            return;
         }
+        _endgameInformer.InvokeOnFinishReached();
+        playerMovement.GetComponent<Collider2D>().enabled = false;
     }
 }

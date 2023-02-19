@@ -5,6 +5,7 @@ namespace UIElements
 	public class GameOverPanel : MonoBehaviour
 	{
 		private GameOverPanelAnimator _animator;
+		private GameManager _gameManager;
 
 		public void Show()
 		{
@@ -20,16 +21,18 @@ namespace UIElements
 		private void Awake()
 		{
 			_animator = GetComponent<GameOverPanelAnimator>();
+			_gameManager = FindObjectOfType<GameManager>();
 		}
 
 		private void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.R)) {
-				// Restart Level
+				_gameManager.RestartLevel();
+				Hide();
 				
 			} else if (Input.GetKeyDown(KeyCode.Escape)) {
-				// Exit to Main Menu
-				
+				_gameManager.ExitToMainMenu();
+				Hide();
 			}
 		}
 	}

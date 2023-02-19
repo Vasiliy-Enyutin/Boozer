@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace UIElements
 {
 	public class LevelWinPanel : MonoBehaviour
 	{
 		private LevelWinPanelAnimator _animator;
+		private GameManager _gameManager;
 
 		public void Show()
 		{
@@ -20,6 +22,15 @@ namespace UIElements
 		private void Awake()
 		{
 			_animator = GetComponent<LevelWinPanelAnimator>();
+			_gameManager = FindObjectOfType<GameManager>();
+		}
+
+		private void Update()
+		{
+			if (Input.GetKeyDown(KeyCode.Space)) {
+				_gameManager.ExitToMainMenu();
+				Hide();
+			}
 		}
 	}
 }

@@ -115,3 +115,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelWinPanelPrefab: {fileID: 4400939792958563657, guid: 1e4c65aa8d65f8540aacb7bccf4989a1, type: 3}
   _gameOverPanelPrefab: {fileID: 6224965824071500862, guid: a0cfff1f6117f7749bc21ec7fcab65cc, type: 3}
+  _controlsPanelPrefab: {fileID: 3418345614589250810, guid: 5a1a0cbfc8d684a4c8ac21b244f353ef, type: 3}
+  _mainMenuPanelPrefab: {fileID: 7178297889630912424, guid: 6f9a78edf4d083b48b345cad69bfe646, type: 3}
